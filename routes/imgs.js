@@ -6,7 +6,6 @@ router.get('/:imagefile', (req,res)=>{
     let id = imagefile.split(".").shift();
     imageUpload.findById(id)
     .then(v =>{
-        if(!imageUpload.pathName) return res.status(404).send("woops! didnt found that one! D:")
         res.render('img', {image: v.filePath})
-    }).catch(err => console.log(err))
+    }).catch(err => console.log(err).then(res.status(404).send("oof! an error happened :/")))
 })

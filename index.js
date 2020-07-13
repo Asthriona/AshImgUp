@@ -14,8 +14,10 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
 const uploadRoute = require('./routes/upload');
-const imgsRoute = require('./routes/imgs')
+const imgsRoute = require('./routes/imgs');
+const apiRoute = require('./routes/api');
 app.use('/upload', uploadRoute);
+app.use('/api', apiRoute);
 app.use('/img', imgsRoute)
 
 

@@ -17,7 +17,7 @@ uploadbtn.addEventListener('click', ()=>{
             let div = document.querySelector('div.img');
             let link = document.createElement('a');
             let linkText = document.createTextNode('Here is your link! :)')
-            link.href = 'http://rev.asthriona.com:3000/img/'+json.fileName;
+            link.href = 'http://aiu.asthriona.com/upload'+json.fileName;
             link.appendChild(linkText)
             div.appendChild(link)
         })

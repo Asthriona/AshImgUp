@@ -25,4 +25,4 @@ app.get('/', (req,res)=>{
     res.render('index', {title: "Image uploader"});
 })
 
-app.listen(3000, () => console.log("Running! :D"))
+app.listen(Config.port, () => console.log("Running! :D"))
